@@ -95,9 +95,11 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/Roboto-Medium.ttf", 40)
-    draw.text((5,950), "Playing Here"
-    draw.text((5, 650), f"{title}", (255, 91, 51),
+    font = ImageFont.truetype("etc/Roboto-Medium.ttf", 60)
+    draw.text((45, 630), f"Playing here...", (0, 59, 78), font=font)
+    draw.text((45, 670),
+        f"[{title[:30]}]...",
+        (0, 59, 78),
         font=font,
     )
     img.save("final.png")
@@ -365,7 +367,8 @@ async def m_cb(b, cb):
 
     elif type_ == "cls":          
         await cb.answer("closed menu")
-        await cb.message.delete()       
+        await cb.message.delete()
+
 
     elif type_ == "menu":  
         stats = updated_stats(cb.message.chat, qeue)  
@@ -409,7 +412,7 @@ async def m_cb(b, cb):
                 await cb.answer("skipped")
                 await cb.message.edit((m_chat, qeue), reply_markup=r_ply(the_data))
                 await cb.message.reply_text(
-                    f"⫸ skipped track\n⫸ now playing : **{qeue[0][0]}**"
+                    f"⏭️ skipped track\n now playing : **{qeue[0][0]}**"
                 )
 
     elif type_ == "leave":
@@ -420,7 +423,7 @@ async def m_cb(b, cb):
                 pass
 
             callsmusic.pytgcalls.leave_group_call(chet_id)
-            await cb.message.edit("⏹ **music stopped!**")
+            await cb.message.edit("**music stopped!**")
         else:
             await cb.answer("assistant is not connected to voice chat!", show_alert=True)
 
@@ -515,14 +518,14 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Menu", callback_data="menu"),
+                    InlineKeyboardButton("📮 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
+        thumb_name = "https://telegra.ph/file/2e5fa6737a5b709dcce56.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -535,7 +538,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🔁 **processing...**")
+        await lel.edit("🔁 **processing song...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -560,7 +563,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Menu", callback_data="menu"),
+                    InlineKeyboardButton("📮 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
@@ -587,7 +590,7 @@ async def play(_, message: Message):
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣"]
             while j < 5:
-                toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}](https://youtube.com{results[j]['url_suffix']})...\n"
+                toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})...\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
                 toxxt += f" └ ⚡ __Powered by {BOT_NAME} A.I__\n\n"
                 j += 1            
@@ -643,7 +646,7 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Menu", callback_data="menu"),
+                    InlineKeyboardButton("📮 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
@@ -739,7 +742,7 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Menu", callback_data="menu"),
+                    InlineKeyboardButton("📮 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
