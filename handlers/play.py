@@ -506,6 +506,7 @@ async def play(_, message: Message):
         if message.reply_to_message
         else None
     )
+    if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
                 f"❌ **lagu dengan durasi lebih dari** `{DURATION_LIMIT}` **menit tidak dapat diputar!**"
