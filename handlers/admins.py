@@ -22,7 +22,7 @@ async def update_admin(client, message: Message):
             for member in await message.chat.get_members(filter="administrators")
         ],
     )
-    await message.reply_text("✅ Bot **reloaded correctly !**\n✅ **Admin list** has been **updated !**")
+    await message.reply_text("""✅ Bot **reloaded correctly !**\n✅ **Admin list** has been **updated !**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
