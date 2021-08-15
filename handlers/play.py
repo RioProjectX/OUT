@@ -99,7 +99,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((20, 720), f"Playing here...", (0, 59, 78), font=font)
     draw.text((20, 670),
         f"{title[:25]}...",
-        (0, 59, 78),
+        (0, 69, 78),
         font=font,
     )
     img.save("final.png")
