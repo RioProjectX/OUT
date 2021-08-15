@@ -1,9 +1,9 @@
 {
-    "name": "Veez Music Bot",
-    "logo": "https://i.postimg.cc/SQBqsJjN/logo8-11-232731.png",
-    "description": "Veez Music project allow you to stream music trought the telegram voice chat feature.",
+    "name": "KennedyX Music",
+    "logo": "https://telegra.ph/file/73cbefa8401982900fe81.jpg",
+    "description": "KennedyX Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/levina-lab/veezmusic",
+    "repository": "https://github.com/KennedyProject/KennedyXMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -22,12 +22,12 @@
         "BOT_USERNAME": {
             "description": "fill with your bot username without @",
             "required": true,
-            "value": "veezmusicbot"
+            "value": "KennedyXRobot"
         },
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username without @",
             "required": true,
-            "value": "veezasisstant"
+            "value": "assistantmusicken"
         },
         "BG_IMAGE": {
             "description": "fill with your link costum background image",
@@ -37,12 +37,12 @@
         "THUMB_IMG": {
             "description": "fill with costum thumbnail image it's different with bg_image",
             "required": false,
-            "value": "https://telegra.ph/file/14500969a4b584d1cd672.png"
+            "value": "https://telegra.ph/file/73cbefa8401982900fe81.jpg"
         },
         "OWNER_NAME": {
             "description": "fill with your username without @",
             "required": false,
-            "value": "dlwrml"
+            "value": "xgothboi"
         },
         "API_ID": {
             "description": "your App ID from my.telegram.org/apps",
@@ -69,12 +69,12 @@
         "UPDATES_CHANNEL": {
             "description": "isi dengan username channel kamu, jika tidak punya lewati saja",
             "required": false,
-            "value": "levinachannel"
+            "value": "KennedyProject"
         },
         "GROUP_SUPPORT": {
             "description": "isi dengan username grup kamu, jika tidak punya skip saja",
             "required": false,
-            "value": "gcsupportbots"
+            "value": "kenbotsupport"
         }
     },
     "buildpacks": [
