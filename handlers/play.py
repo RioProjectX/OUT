@@ -427,7 +427,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔁 ***Sedang Memproses...**")
+    lel = await message.reply("🔁 **Sedang Memproses...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -514,8 +514,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("Groups", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -561,8 +561,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("Groups", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -645,8 +645,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/menggabutonly"),
-                    InlineKeyboardButton("Channel", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton("Groups", url=f"https://t.me/menggabutonly"),
+                    InlineKeyboardButton("Channel", url=f"https://t.me/KennedyProject"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -787,8 +787,8 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("Groups", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -986,7 +986,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("Anda bukan orang yang meminta untuk memutar lagu!", show_alert=True)
         return
-    await cb.message.edit("**Connecting to VCG...**")
+    await cb.message.edit("**Menghubungkan ke obrolan suara...**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1023,8 +1023,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
+                    InlineKeyboardButton("Groups", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
