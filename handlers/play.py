@@ -583,7 +583,7 @@ async def play(_, message: Message):
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
-          results = YoutubeSearch(query, max_results=6).to_dict()
+          results = YoutubeSearch(query, max_results=5).to_dict()
         except:
           await lel.edit("**anda tidak memberikan judul lagu apapun !**")
         # veez project
@@ -593,7 +593,7 @@ async def play(_, message: Message):
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣"]
             while j < 5:
-                toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
+                toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}](https://youtube.com{results[j]['url_suffix']})...\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
                 toxxt += f" └ ⚡ __Powered by {BOT_NAME} A.I__\n\n"
                 j += 1            
@@ -668,7 +668,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **Judul:** [{title[:30]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+            caption=f"🏷 **Judul:** [{title[:30]}]({url})...\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
                    +f"🎧 **Permintaan:** {message.from_user.mention}",
             reply_markup=keyboard
         )
@@ -689,7 +689,7 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **Judul:** [{title[:30]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** `Sedang Memutar`\n" \
+            caption=f"🏷 **Judul:** [{title[:30]}]({url})...\n⏱ **Durasi:** {duration}\n💡 **Status:** `Sedang Memutar`\n" \
                    +f"🎧 **Permintaan:** {message.from_user.mention}",
             reply_markup=keyboard
         )
@@ -745,10 +745,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏺ Menu", callback_data="menu"),
+                    InlineKeyboardButton("🤖 Menu", callback_data="menu"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
-                ],[
-                    InlineKeyboardButton("📣 CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
             ]
     )
@@ -769,7 +767,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
         photo="final.png",
-        caption=f"🏷 **Judul:** [{title[:25]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+        caption=f"🏷 **Judul:** [{title[:25]}]({url})...\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
                +f"🎧 **Permintaan:** {r_by.mention}",
         reply_markup=keyboard,
         )
@@ -789,7 +787,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
         photo="final.png",
-        caption=f"🏷 **Judul:** [{title[:25]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** `Sedang Memutar`\n" \
+        caption=f"🏷 **Judul:** [{title[:25]}]({url})...\n⏱ **Durasi:** {duration}\n💡 **Status:** `Sedang Memutar`\n" \
                +f"🎧 **Permintaan:** {r_by.mention}",
         reply_markup=keyboard,
         )
