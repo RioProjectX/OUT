@@ -95,7 +95,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/font.otf", 33)
+    font = ImageFont.truetype("etc/font.otf", 0)
     draw.text((205, 550), f"Judul: {title}", (255, 91, 51), font=font)
     draw.text(
         (205, 590), f"Durasi: {duration}", (0, 59, 78), font=font
@@ -521,7 +521,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🤖 Menu", callback_data="menu"),
+                    InlineKeyboardButton("Menu", callback_data="menu"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
@@ -541,7 +541,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🔁 **processing song...**")
+        await lel.edit("🔁 **processing...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -566,7 +566,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🤖 Menu", callback_data="menu"),
+                    InlineKeyboardButton("Menu", callback_data="menu"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
@@ -649,7 +649,7 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🤖 Menu", callback_data="menu"),
+                    InlineKeyboardButton("Menu", callback_data="menu"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
@@ -745,7 +745,7 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🤖 Menu", callback_data="menu"),
+                    InlineKeyboardButton("Menu", callback_data="menu"),
                     InlineKeyboardButton("🗑 Close", callback_data="cls"),
                 ],
             ]
