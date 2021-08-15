@@ -427,7 +427,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("⚡ `Sedang Memproses...`")
+    lel = await message.reply("🔁 ***Sedang Memproses...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -459,7 +459,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "I joined this group for playing music in VC"
+                        message.chat.id, "🤖 I joined this group for playing music in VC"
                     )
                     await lel.edit(
                         "<b>helper userbot joined your chat</b>",
@@ -482,7 +482,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("⚡ `Sedang Mencari Lagu...`")
+    await lel.edit("🔎 **Sedang Mencari Lagu...**")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -506,16 +506,15 @@ async def play(_, message: Message):
         if message.reply_to_message
         else None
     )
-    if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ **Lagu dengan durasi lebih dari** `{DURATION_LIMIT}` **menit tidak boleh diputar!**"
+                f"❌ **lagu dengan durasi lebih dari** `{DURATION_LIMIT}` **menit tidak dapat diputar!**"
             )
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/menggabutonly"),
-                    InlineKeyboardButton("Channel", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -535,7 +534,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("⚡ `Sedang Memproses Lagu...`")
+        await lel.edit("🔁 **Sedang Memproses Lagu...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -561,8 +560,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/menggabutonly"),
-                    InlineKeyboardButton("Channel", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -575,7 +574,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("⚡ `Sedang Memproses Lagu...`")
+        await lel.edit("🔁 **Sedang Memproses Lagu...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -698,7 +697,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("⚡ `Sedang Memproses Lagu`")
+    lel = await message.reply("🔁 **Sedang Memproses Lagu**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -730,7 +729,7 @@ async def ytplay(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "I joined this group for playing music in VC"
+                        message.chat.id, "🤖 I joined this group for playing music in VC"
                     )
                     await lel.edit(
                         "<b>helper userbot joined your chat</b>",
@@ -761,7 +760,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("⚡ `Sedang Memproses Lagu...`")
+    await lel.edit("🔁 **Sedang Memproses Lagu...**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -787,8 +786,8 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/menggabutonly"),
-                    InlineKeyboardButton("Channel", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -841,7 +840,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("⚡ `Sedang Memproses Lagu`")
+    lel = await message_.reply("🔁 **Sedang Memproses Lagu**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -872,7 +871,7 @@ async def deezer(client: Client, message_: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message_.chat.id, "I joined this group for playing music in VC"
+                        message_.chat.id, "🤖 I joined this group for playing music in VC"
                     )
                     await lel.edit(
                         "<b>helper userbot joined your chat</b>",
@@ -925,7 +924,7 @@ async def deezer(client: Client, message_: Message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/KennedyProject")],
+            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     file_path = await converter.convert(wget.download(url))
@@ -986,7 +985,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("Anda bukan orang yang meminta untuk memutar lagu!", show_alert=True)
         return
-    await cb.message.edit("**Processing**")
+    await cb.message.edit("**Connecting to VCG...**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1002,10 +1001,13 @@ async def lol_cb(b, cb):
     url = f"https://youtube.com{resultss}"
     
     try:    
-        duuration= round(duration / 60)
-        if duuration > DURATION_LIMIT:
-            await cb.message.edit(f"Lagu lebih lama dari {DURATION_LIMIT} menit tidak diperbolehkan diputar")
-            return
+        secmul, dur, dur_arr = 1, 0, duration.split(":")
+        for i in range(len(dur_arr)-1, -1, -1):
+            dur += (int(dur_arr[i]) * secmul)
+            secmul *= 60
+        if (dur / 60) > DURATION_LIMIT:
+             await cb.message.edit(f"❌ Lagu dengan durasi lebih dari `{DURATION_LIMIT}` menit tidak dapat diputar.")
+             return
     except:
         pass
     try:
@@ -1020,8 +1022,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/menggabutonly"),
-                    InlineKeyboardButton("Channel", url="https://t.me/KennedyProject"),
+                    InlineKeyboardButton("Groups", url="https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("Channel", url="https://t.me/{UPDATES_CHANNEL}"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
