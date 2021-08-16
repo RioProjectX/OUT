@@ -27,7 +27,7 @@
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username without @",
             "required": true,
-            "value": "assistantmusicken"
+            "value": "kennedyassistant"
         },
         "BG_IMAGE": {
             "description": "fill with your link costum background image",
