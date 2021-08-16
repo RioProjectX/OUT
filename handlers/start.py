@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
                         "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "👤 Owner", url="https://t.me/{OWNER_NAME}"
+                        "🤴 Owner", url=f"https://t.me/{OWNER_NAME}"
                     )
                 ]
             ]
@@ -69,7 +69,7 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""✅ **bot is running**\n<b>🎈 **uptime:**</b> `{uptime}`""",
+        f"""✅ **Bot is running Successful**\n\n<b>🎈 **Bot uptime:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -92,7 +92,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="❔ HOW TO USE ME", url=f"https://t.me/{BOT_USERNAME}?start=help"
+                        text="❔ HOW TO USE ME", url="https://telegra.ph/HOW-TO-USE-KENNEDY-X-MUSIC-08-16"
                     )
                 ]
             ]
