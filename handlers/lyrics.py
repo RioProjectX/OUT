@@ -7,7 +7,7 @@ from config import BOT_USERNAME
 from helpers.filters import command
 
 
-@Client.on_message(command(["lyric", f"lyric@{BOT_USERNAME}"]))
+@Client.on_message(command(["lirik", f"lirik@{BOT_USERNAME}"]))
 async def lirik(_, message):
     try:
         if len(message.command) < 2:
