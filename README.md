@@ -1,4 +1,4 @@
-<h2 align="centre">⚡ Kennedy X Music</h2>
+<h2 align="centre">🎧 Kennedy X Music 🎧</h2>
 
 ### Music bot for playing music on telegram voice chat group.
 <p align="center"><a href="https://t.me/KennedyXRobot"><img src="https://telegra.ph/file/8008bce98aa5c60f9b37a.png" width="300"></a></p>
@@ -38,7 +38,7 @@
 - `/uptime` - check the bot uptime status
 - `/ping` - check the bot ping status
 
-### Sudo User 🧙‍♂️
+### Sudo User ✅
 - `/pmpermit on | off` turn on/off the assistant pmpermit
 - `/userbotleaveall` - order the assistant to leave all groups
 - `/gcast` - send a broadcast message
@@ -49,7 +49,7 @@
 
 ## 🔎 Support Inline Search
 
-## Heroku Deployment 💜
+## Heroku Deployment 
 The easy way to host this bot, deploy to Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KennedyProject/KennedyXMusic)
