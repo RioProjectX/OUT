@@ -32,7 +32,7 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>📌 **Holla {message.from_user.mention()}** \n
+        f"""<b>🔹 **Holla {message.from_user.mention()} Welcome!** \n
 💭 **Nama Saya {BOT_NAME}, Saya adalah pemutar musik voice call group (VCG). Untuk info cara menggunakan saya, anda bisa ketik /help**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
                         "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🤴 Owner", url=f"https://t.me/{OWNER_NAME}"
+                        "🤴 Developer", url="https://t.me/xgothboi"
                     )
                 ]
             ]
@@ -92,7 +92,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="❔ HOW TO USE ME", url="https://telegra.ph/HOW-TO-USE-KENNEDY-X-MUSIC-08-16"
+                        text="❔ HOW TO USE ME ❔", url="https://telegra.ph/HOW-TO-USE-KENNEDY-X-MUSIC-08-16"
                     )
                 ]
             ]
@@ -167,8 +167,8 @@ async def ping_pong(client: Client, message: Message):
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "`PONG!!`\n"
-        f"⚡️ `{delta_ping * 1000:.3f} ms`"
+        "**Pong!!**\n"
+        f"🔹 `{delta_ping * 1000:.3f} ms`"
     )
 
 
