@@ -13,6 +13,7 @@ from callsmusic.queues import queues
 
 
 @Client.on_message(filters.command("reload"))
+@authorized_users_only
 async def update_admin(client, message: Message):
     chat_id = get_chat_id(message.chat)
     set(
@@ -111,6 +112,7 @@ async def skip(_, message: Message):
 
 @Client.on_message(filters.command("cache"))
 @errors
+@authorized_users_only
 async def admincache(client, message: Message):
     set(
         message.chat.id,
