@@ -32,8 +32,8 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>📌 **Holla {message.from_user.first_name}** \n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Saya adalah pemutar music voice call group (VCG). Untuk info cara menggunakan saya, anda bisa ketik /help**
+        f"""<b>📌 **Holla {message.from_user.mention()}** \n
+💭 **Nama Saya {BOT_NAME}, Saya adalah pemutar musik voice call group (VCG). Untuk info cara menggunakan saya, anda bisa ketik /help**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
@@ -102,44 +102,44 @@ async def help(client: Client, message: Message):
 @Client.on_message(command("help") & filters.private & ~filters.edited)
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>Hello {message.from_user.mention()}, welcome to help menu ✨
-\n📌HOW TO USE ME ?
-\n1. first add me to your group.
+        f"""<b>Holla Welcome to help menu ✨
+\n📌BAGAIMANA CARA MENGGUNAKAN SAYA ?
+\n1. pertama tambahkan saya ke grup mu.
 2. promote me as admin and give all permission.
-3. then, add @{ASSISTANT_NAME} to your group or type /userbotjoin.
-3. make sure you turn on the voice chat first before start playing music.
-\n📌**commands for all user:**
-\n/play (song name) - play song from youtube
-/stream (reply to audio) - play song using audio file
-/playlist - show the list song in queue
-/current - show the song in streaming
-/song (song name) - download song from youtube
-/search (video name) - search video from youtube detailed
-/vsong (video name) - download video from youtube detailed
-/vk (song name) - download song from inline mode
-\n📌 **commands for admins:**
-\n/player - open music player settings panel
-/pause - pause the music streaming
-/resume - resume the music was paused
-/skip - skip to the next song
-/end - stop music streaming
-/userbotjoin - invite assistant join to your group
-/reload - for refresh the admin list
-/cache - for cleared admin cache
-/musicplayer (on / off) - disable / enable music player in your group
+3. kemudian, tambahkan @{ASSISTANT_NAME} ke grupmu atau bisa ketik /userbotjoin.
+3. nyalakan dulu VCG sebelum memutar musik.
+\n📌**perintan untuk semua anggota grup:**
+\n/play (judul lagu) - memutar musik melalui youtube
+/stream (balas ke audio) - memutar musik melalui balas audio
+/playlist - kenunjukan daftar putar
+/current - menunjukan yang sedang diputar saat ini
+/song (judul lagu) - mengunduh musik melalui youtube
+/search (nama video) - mencari video dari youtube secara rinci
+/vsong (nama video) - mengunduh video dari youtube secara rinci
+/vk (judul lagu) - unduh melalui mode inline
+\n📌 **perintah untuk admin:**
+\n/player - membuka panel oengaturan musik
+/pause - jeda pemutaran musik
+/resume - melanjutkan pemutaran musik
+/skip - melompati lagu yang sedang diputar
+/end - menghentikan musik
+/userbotjoin - mengundang assisten ke grup anda
+/reload - untuk memperbarui daftar admin
+/cache - untuk membersihkan cache admin
+/musicplayer (on / off) - mematikan/menghidupkan pemutar musik di grupmu
 \n🎧 channel streaming commands:
-\n/cplay - stream music on channel voice chat
-/cplayer - show the song in streaming
-/cpause - pause the streaming music
-/cresume - resume the streaming was paused
-/cskip - skip streaming to the next song
-/cend - end the streaming music
-/admincache - refresh the admin cache
+\n/cplay - mendengarkan musik lewat channel
+/cplayer - melihat daftar putar
+/cpause - jeda pemutar musik
+/cresume - melajutkan musik yang di jeda
+/cskip - melompati lagu yang sedang diputar
+/cend - menghentikan lagu
+/admincache - memperbarui cache admin
 \n🧙‍♂️ command for sudo users:
-\n/userbotleaveall - order the assistant to leave from all group
-/gcast - send a broadcast message trought the assistant
+\n/userbotleaveall - mengeluarkan asisten dari semua grup
+/gcast - mengirim pesan siaran
 \n📌 **commands for fun:**
-\n/lyric - (song name) lyrics scrapper
+\n/lyric - (judul lagu) melihat lirik
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
