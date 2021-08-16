@@ -80,7 +80,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("✅ __Userbot has been disconnected__")
+        await message.reply_text("✅ __Userbot terputus dari obrolan suara__")
 
 
 @Client.on_message(command("skip") & other_filters)
