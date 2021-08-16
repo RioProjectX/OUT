@@ -1,7 +1,7 @@
 <h2 align="centre">⚡ Kennedy X Music</h2>
 
 ### Music bot for playing music on telegram voice chat group.
-<p align="center"><a href="https://t.me/KennedyXRobot"><img src="https://telegra.ph/file/d3241800e0441d4ec4fe3.jpg" width="300"></a></p>
+<p align="center"><a href="https://t.me/KennedyXRobot"><img src="https://telegra.ph/file/8008bce98aa5c60f9b37a.png" width="300"></a></p>
 
 <h3>Requirements 📝</h3>
 
