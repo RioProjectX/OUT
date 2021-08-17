@@ -1,7 +1,7 @@
-<h2 align="centre">☄️ Kennedy X Music ☄️</h2>
+<h2 align="centre">🎶 Rio Music 🎶</h2>
 
-### Music bot for playing music on telegram voice chat group.
-<p align="center"><a href="https://t.me/KennedyXRobot"><img src="https://telegra.ph/file/8008bce98aa5c60f9b37a.png" width="300"></a></p>
+### Rio Music Adalah Bot Pintar Yang Bisa Memutar Lagu Di Obrolan Suara.
+<p align="center"><a href="https://t.me/siiniaja"><img src="https://telegra.ph/file/1f5e69dd5c0492f1553cf.jpg" width="300"></a></p>
 
 <h3>Requirements 📝</h3>
 
@@ -12,7 +12,7 @@
 
 🧪 Get STRING_SESSION from here:
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@KennedyProject/Ken-String-Session#main.py)
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@RioProjectX/stringen-1?v=1)
 
 
 ## Commands 🛠
@@ -52,16 +52,15 @@
 ## Heroku Deployment 
 The easy way to host this bot, deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KennedyProject/KennedyXMusic)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RioProjectX/Rio-Music)
 
-## Railway Deployment 👷
-For deployment on railway you can see the full of [Necessary Variables Here](https://github.com/KennedyProject/KennedyXMusic/blob/main/example.env), make sure you fill all of it.
 
-[![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/KennedyProject/KennedyXMusic&envs=SESSION_NAME,BOT_TOKEN,BOT_USERNAME,BOT_NAME,GROUP_SUPPORT,ASSISTANT_NAME,BG_IMAGE,UPDATES_CHANNEL,API_ID,PMPERMIT,API_HASH,SUDO_USERS,DURATION_LIMIT,THUMB_IMG)
-
-### Credits 📌
-- [Kennedy](https://github.com/KennedyProject) KennedyXMusic Developer
+### Special Credits ⚡
 - [RojSerBest](https://github.com/rojserbest) CallsMusic Developer
+- [KennedyProject](https://t.me/xgothboi) Ken
 
-### Support & Updates ✨
-<a href="https://t.me/kenbotsupport"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/KennedyProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
+### Dev 🎶
+- [RioProjectX](https://github.com/RioProjectX) Rio
+
+### Support & Updates 🎑
+<a href="https://t.me/siiniaja"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/riobotsupport"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
