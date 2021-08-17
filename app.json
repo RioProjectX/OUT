@@ -22,12 +22,12 @@
         "BOT_USERNAME": {
             "description": "fill with your bot username without @",
             "required": true,
-            "value": "KennedyXRobot"
+            "value": "Username Bot Kamu Yang Dari Bot Father , Tanpa @"
         },
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username without @",
             "required": true,
-            "value": "kennedyassistant"
+            "value": "Nama Asisten Bot Kamu Gausah Pake @"
         },
         "BG_IMAGE": {
             "description": "fill with your link costum background image",
