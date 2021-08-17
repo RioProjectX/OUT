@@ -28,10 +28,10 @@ async def update_admin(client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Group Support", url=f"https://t.me/kenbotsupport"
+                        "Group Support", url=f"https://t.me/siiniaja"
                     ),
                     InlineKeyboardButton(
-                        "Created By", url=f"https://t.me/xgothboi"
+                        "Created By", url=f"https://t.me/riio00"
                     )
                 ]
             ]
@@ -91,7 +91,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❌ nothing is playing to skip!")
+        await message.reply_text("❌ Tidak Ada Lagu Untuk Di Skip!")
     else:
         queues.task_done(chat_id)
 
@@ -107,7 +107,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"⏭ **You Skipped To The Next Song**")
+    await message.reply_text(f"⏭ **Melanjut Kan Ke Lagu Berikutnya**")
 
 
 @Client.on_message(filters.command("cache"))
