@@ -1,9 +1,9 @@
 {
-    "name": "KennedyX Music",
-    "logo": "https://telegra.ph/file/73cbefa8401982900fe81.jpg",
-    "description": "KennedyX Music allow you to stream music trought the telegram voice chat feature.",
+    "name": "Rio Music",
+    "logo": "https://telegra.ph/file/bec3b0efa1b3967164eaa.jpg",
+    "description": "Rio Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/KennedyProject/KennedyXMusic",
+    "repository": "https://github.com/RioProjectX/Rio-Music",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -37,12 +37,12 @@
         "THUMB_IMG": {
             "description": "fill with costum thumbnail image it's different with bg_image",
             "required": false,
-            "value": "https://telegra.ph/file/8008bce98aa5c60f9b37a.png"
+            "value": "https://telegra.ph/file/bec3b0efa1b3967164eaa.jpg"
         },
         "OWNER_NAME": {
             "description": "fill with your username without @",
             "required": false,
-            "value": "xgothboi"
+            "value": "riio00"
         },
         "API_ID": {
             "description": "your App ID from my.telegram.org/apps",
@@ -69,12 +69,12 @@
         "UPDATES_CHANNEL": {
             "description": "isi dengan username channel kamu, jika tidak punya lewati saja",
             "required": false,
-            "value": "KennedyProject"
+            "value": "riobotsupport"
         },
         "GROUP_SUPPORT": {
             "description": "isi dengan username grup kamu, jika tidak punya skip saja",
             "required": false,
-            "value": "kenbotsupport"
+            "value": "siiniaja"
         }
     },
     "buildpacks": [
