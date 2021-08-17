@@ -32,29 +32,29 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>🔹 **Holla {message.from_user.mention()} Welcome!** \n
-💭 **Nama Saya {BOT_NAME}, Saya adalah pemutar musik voice call group (VCG). Untuk info cara menggunakan saya, anda bisa ketik /help**
+        f"""<b>🔹 **ʜᴀʟᴏ {message.from_user.mention()} ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ!** \n
+💭 **ɴᴀᴍᴀ ꜱᴀʏᴀ {BOT_NAME}, ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ᴘᴇɴɢᴀᴍᴇɴ ʏᴀɴɢ ʙᴀɪᴋ , ᴀɴᴅᴀ ʙɪꜱᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜᴛᴀʀ ʟᴀɢᴜ ᴅɪ ᴏʙʀᴏʟᴀɴ ꜱᴜᴀʀᴀ (VCG). ɪɴꜰᴏ ʟᴇʙɪʜ ʟᴀɴᴊᴜᴛ ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ʙɪꜱᴀ ᴛᴇᴋᴀɴ /help**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ ꜱᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ᴍᴜ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "📚 Commands", url="https://telegra.ph/HOW-TO-USE-KENNEDY-X-MUSIC-08-16"
+                         "📚 ᴘᴇʀɪɴᴛᴀʜ", url="https://telegra.ph/HOW-TO-USE-KENNEDY-X-MUSIC-08-16"
                     ),
                     InlineKeyboardButton(
-                        "♥️ Donate", url=f"https://t.me/{OWNER_NAME}")
+                        "🐥 ᴘᴇᴍɪʟɪᴋ ʙᴏᴛ", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥 ᴏꜰꜰɪᴄɪᴀʟ ɢʀᴏᴜᴘ", url=f"https://t.me/siiniaja"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
+                        "📣 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/riobotsupport")
                 ],[
                     InlineKeyboardButton(
-                        "🤴 Developer", url="https://t.me/xgothboi"
+                        "🤴 ᴘᴇɴᴇᴍᴜ ʙᴏᴛ", url="https://t.me/riio00"
                     )
                 ]
             ]
@@ -74,10 +74,10 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "Group", url=f"https://t.me/siiniaja"
                     ),
                     InlineKeyboardButton(
-                        "Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "Channel", url=f"https://t.me/riobotsupport"
                     )
                 ]
             ]
@@ -102,8 +102,8 @@ async def help(client: Client, message: Message):
 @Client.on_message(command("help") & filters.private & ~filters.edited)
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>Holla Welcome to help menu ✨
-\n📌BAGAIMANA CARA MENGGUNAKAN SAYA ?
+        f"""<b>Halo Welcome to help menu ✨
+\n📌ʙᴀɢᴀɪᴍᴀɴᴀ ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ?
 \n1. pertama tambahkan saya ke grup mu.
 2. promote me as admin and give all permission.
 3. kemudian, tambahkan @{ASSISTANT_NAME} ke grupmu atau bisa ketik /userbotjoin.
@@ -145,15 +145,15 @@ async def help_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "GROUP", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "GROUP", url=f"https://t.me/siiniaja"
                     ),
                     InlineKeyboardButton(
-                        "CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "CHANNEL", url=f"https://t.me/riobotsupport"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "DEVELOPER", url=f"https://t.me/xgothboi"
+                        "ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/riio00"
                     )
                 ]
             ]
