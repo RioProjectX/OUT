@@ -41,7 +41,7 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
 ┣• Melihat Lirik Lagu.
 ┣• Mempunyai Banyak Modul Menarik.
 ┣• Mencari Lagu Yang ingin di Putar atau di Download.
-┣• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap {PROJECT_NAME}
+┣• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap Saya
 ┗━━━━━━━━━━━━━━
 ❃ Project By [Rio Cute](https://t.me/riio00)
 ❃ Terimakasih Telah Menggunakan Project Ini! [{OWNER_NAME}](https://t.me/{OWNER_NAME})
@@ -165,7 +165,7 @@ async def help_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "DEVELOPER", url=f"https://t.me/siiniaja"
+                        "DEVELOPER", url=f"https://t.me/riio00"
                     )
                 ]
             ]
