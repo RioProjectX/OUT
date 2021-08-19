@@ -32,8 +32,20 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>🔹 **ʜᴀʟᴏ {message.from_user.mention()} ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ!** \n
-💭 **ɴᴀᴍᴀ ꜱᴀʏᴀ {BOT_NAME}, ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ᴘᴇɴɢᴀᴍᴇɴ ʏᴀɴɢ ʙᴀɪᴋ , ᴀɴᴅᴀ ʙɪꜱᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜᴛᴀʀ ʟᴀɢᴜ ᴅɪ ᴏʙʀᴏʟᴀɴ ꜱᴜᴀʀᴀ (VCG). ɪɴꜰᴏ ʟᴇʙɪʜ ʟᴀɴᴊᴜᴛ ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ʙɪꜱᴀ ᴛᴇᴋᴀɴ /help . Special Thanks To {OWNER_NAME}**
+        f"""<b>🔹 **Halo {message.from_user.first_name} Cakep, Aku Adalah {PROJECT_NAME} \n
+Saya Bot Music Group, Yang Bisa Memutar Lagu Dengan Cepat di Voice Chat Group Dengan Cara Yang Mudah
+Saya Memiliki Banyak Fitur Praktis Seperti :
+┏━━━━━━━━━━━━━━
+┣• Memutar Musik.
+┣• Mendownload Lagu.
+┣• Melihat Lirik Lagu.
+┣• Mempunyai Banyak Modul Menarik.
+┣• Mencari Lagu Yang ingin di Putar atau di Download.
+┣• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap {PROJECT_NAME}
+┗━━━━━━━━━━━━━━
+❃ Project By [Rio Cute].(https://t.me/riio00)
+❃ Terimakasih Untuk Telah Menggunakan Project Ini [{OWNER_NAME}](https://t.me/{OWNER_NAME})
+━━━━━━━━━━━━━━━**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
