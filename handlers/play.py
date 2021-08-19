@@ -144,7 +144,7 @@ def updated_stats(chat, queue, vol=100):
             stats += "Volume : {}%\n".format(vol)
             stats += "Lagu dalam antrian : `{}`\n".format(len(que))
             stats += "Sedang memutar lagu : **{}**\n".format(queue[0][0])
-            stats += "Requested by : {}".format(queue[0][1].mention)
+            stats += "Permintaan Dari : {}".format(queue[0][1].mention)
     else:
         stats = None
     return stats
@@ -919,7 +919,7 @@ async def deezer(client: Client, message_: Message):
     try:    
         duuration= round(duration / 60)
         if duuration > DURATION_LIMIT:
-            await cb.message.edit(f"**Musik lebih lama dari** `{DURATION_LIMIT}` **menit tidak diperbolehkan diputar**")
+            await cb.message.edit(f"**Musik lebih lama dari** `{DURATION_LIMIT}` **menit ga bisa diputar goblok!!**")
             return
     except:
         pass    
@@ -944,7 +944,7 @@ async def deezer(client: Client, message_: Message):
         qeue.append(appendable)
         await res.edit_text(f"🎼 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
     else:
-        await res.edit_text(f"🎼️ **Playing...**")
+        await res.edit_text(f"🎼️ **Memutar...**")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
