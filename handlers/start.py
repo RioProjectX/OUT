@@ -49,7 +49,7 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
-                [
+                    ),
                     InlineKeyboardButton(
                         "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ ꜱᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ᴍᴜ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                     ),
