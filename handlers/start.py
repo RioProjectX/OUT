@@ -43,8 +43,8 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
 ┣• Mencari Lagu Yang ingin di Putar atau di Download.
 ┣• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap {PROJECT_NAME}
 ┗━━━━━━━━━━━━━━
-❃ Project By [Rio Cute].(https://t.me/riio00)
-❃ Terimakasih Untuk Telah Menggunakan Project Ini [{OWNER_NAME}](https://t.me/{OWNER_NAME})
+❃ Project By [Rio Cute](https://t.me/riio00)
+❃ Terimakasih Telah Menggunakan Project Ini! [{OWNER_NAME}](https://t.me/{OWNER_NAME})
 ━━━━━━━━━━━━━━━**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
