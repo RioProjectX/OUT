@@ -33,7 +33,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>🔹 **ʜᴀʟᴏ {message.from_user.mention()} ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ!** \n
-💭 **ɴᴀᴍᴀ ꜱᴀʏᴀ {BOT_NAME}, ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ᴘᴇɴɢᴀᴍᴇɴ ʏᴀɴɢ ʙᴀɪᴋ , ᴀɴᴅᴀ ʙɪꜱᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜᴛᴀʀ ʟᴀɢᴜ ᴅɪ ᴏʙʀᴏʟᴀɴ ꜱᴜᴀʀᴀ (VCG). ɪɴꜰᴏ ʟᴇʙɪʜ ʟᴀɴᴊᴜᴛ ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ʙɪꜱᴀ ᴛᴇᴋᴀɴ /help**
+💭 **ɴᴀᴍᴀ ꜱᴀʏᴀ {BOT_NAME}, ꜱᴀʏᴀ ᴀᴅᴀʟᴀʜ ᴘᴇɴɢᴀᴍᴇɴ ʏᴀɴɢ ʙᴀɪᴋ , ᴀɴᴅᴀ ʙɪꜱᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜᴛᴀʀ ʟᴀɢᴜ ᴅɪ ᴏʙʀᴏʟᴀɴ ꜱᴜᴀʀᴀ (VCG). ɪɴꜰᴏ ʟᴇʙɪʜ ʟᴀɴᴊᴜᴛ ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ꜱᴀʏᴀ ʙɪꜱᴀ ᴛᴇᴋᴀɴ /help . Special Thanks To {OWNER_NAME}**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
@@ -42,7 +42,7 @@ async def start_(client: Client, message: Message):
                         "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ ꜱᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ᴍᴜ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "📚 ᴘᴇʀɪɴᴛᴀʜ", url="https://telegra.ph/HOW-TO-USE-KENNEDY-X-MUSIC-08-16"
+                         "🐥 Group", url="https://t.me/{GROUP_USERNAME}")
                     ),
                     InlineKeyboardButton(
                         "🐥 ᴘᴇᴍɪʟɪᴋ ʙᴏᴛ", url=f"https://t.me/{OWNER_NAME}")
@@ -55,6 +55,9 @@ async def start_(client: Client, message: Message):
                 ],[
                     InlineKeyboardButton(
                         "🤴 ᴘᴇɴᴇᴍᴜ ʙᴏᴛ", url="https://t.me/riio00"
+                ],[
+                    InlineKeyboardButton(
+                        "🛠 Repo", url="http://github.com/RioProjectX/Rio-Music")
                     )
                 ]
             ]
@@ -92,7 +95,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="❔ HOW TO USE ME ❔", url="https://telegra.ph/HOW-TO-USE-KENNEDY-X-MUSIC-08-16"
+                        text="❔ Cara Menggunakan ❔", url="https://t.me/siiniaja"
                     )
                 ]
             ]
@@ -164,10 +167,10 @@ async def help_(client: Client, message: Message):
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("pinging...")
+    m_reply = await message.reply_text("Sedang Mengecek Ping...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "**Pong!!**\n"
+        "**Ping Pong!!**\n"
         f"🔹 `{delta_ping * 1000:.3f} ms`"
     )
 
@@ -179,7 +182,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 bot status:\n"
+        "🔮Status Bot:\n"
         f"• **uptime:** `{uptime}`\n"
         f"• **start time:** `{START_TIME_ISO}`"
     )
