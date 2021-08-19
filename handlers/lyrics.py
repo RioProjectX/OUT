@@ -11,12 +11,12 @@ from helpers.filters import command
 async def lirik(_, message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("**give a lyric name too !**")
+            await message.reply_text("**Berikan Saya Judul Lagu !**")
             return
         query = message.text.split(None, 1)[1]
-        rep = await message.reply_text("🔎 **searching lyrics...**")
+        rep = await message.reply_text("🔎 **Mencari Lirik Lagu...**")
         resp = requests.get(f"https://tede-api.herokuapp.com/api/lirik?l={query}").json()
         result = f"{resp['data']}"
         await rep.edit(result)
     except Exception:
-        await rep.edit("**Lyrics not found.** please give a valid song name !")
+        await rep.edit("**Lirik Tidak Ditemukan , Cari yang Bener Anjg!.** Jangan Spam Biar Ga Delay !")
