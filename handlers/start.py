@@ -47,26 +47,26 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
 ❃ Terimakasih Telah Menggunakan Project Ini! [{OWNER_NAME}](https://t.me/{OWNER_NAME})
 ━━━━━━━━━━━━━━━**
 </b>""",
-        reply_markup=InlineKeyboardMarkup(
+                reply_markup=InlineKeyboardMarkup(
             [ 
-                    ),
+                [
                     InlineKeyboardButton(
-                        "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ ꜱᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ᴍᴜ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-                    ),
+                        "➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                ],[
                     InlineKeyboardButton(
                          "🐥 Group", url="https://t.me/{GROUP_SUPPORT}")
                     ),
                     InlineKeyboardButton(
-                        "🐥 ᴘᴇᴍɪʟɪᴋ ʙᴏᴛ", url=f"https://t.me/{OWNER_NAME}")
+                        "🐥 Pemilik Bot", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "👥 ᴏꜰꜰɪᴄɪᴀʟ ɢʀᴏᴜᴘ", url=f"https://t.me/siiniaja"
+                        "👥 Official Group", url=f"https://t.me/siiniaja"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/riobotsupport")
+                        "📣 Official Channel", url=f"https://t.me/riobotsupport")
                 ],[
                     InlineKeyboardButton(
-                        "🤴 ᴘᴇɴᴇᴍᴜ ʙᴏᴛ", url="https://t.me/riio00"
+                        "🤴 Developer", url="https://t.me/riio00"
                 ],[
                     InlineKeyboardButton(
                         "🛠 Repo", url="http://github.com/RioProjectX/Rio-Music")
