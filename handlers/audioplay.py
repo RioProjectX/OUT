@@ -12,7 +12,7 @@ from callsmusic import callsmusic, queues
 import converter
 from downloaders import youtube
 
-from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG
+from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
 from helpers.filters import command, other_filters
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
@@ -23,7 +23,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def stream(_, message: Message):
 
-    lel = await message.reply("🔁 **processing** sound...")
+    lel = await message.reply("🔁 **memproses** musik...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -31,8 +31,8 @@ async def stream(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Developer",
-                        url=f"https://t.me/riio00"),
+                        text="Group",
+                        url=f"https://t.me/siiniaja"),
                     InlineKeyboardButton(
                         text="Channel​",
                         url=f"https://t.me/riobotsupport")
@@ -46,7 +46,7 @@ async def stream(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
+                f"❎ Tidak dapat memutar lagu lebih dari {DURATION_LIMIT}!"
             )
 
         file_name = get_file_name(audio)
@@ -57,14 +57,14 @@ async def stream(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("❌ you did not give me audio file or yt link to stream!")
+        return await lel.edit_text("❎ anda tidak memberikan saya musik atau link YouTube untuk diputar!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo=f"{QUE_IMG}",
         reply_markup=keyboard,
-        caption=f"#⃣  your requested song was added to **queue**!\n\n⚡ __Powered by {bn} A.I__")
+        caption=f"💡  lagu anda ditambahkan ke **antrian!**\n\n🎧 Atas permintaan {costumer}")
         return await lel.delete()
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
@@ -72,6 +72,6 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{AUD_IMG}",
         reply_markup=keyboard,
-        caption=f"🎧 **now playing** a song requested by {costumer}!\n\n⚡ __Powered by {bn} A.I__"
+        caption=f"🎧 **sedang memutar** sebuah lagu\n\n🎧 Atas permintaan {costumer}!"
         )
         return await lel.delete()
