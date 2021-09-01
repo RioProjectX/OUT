@@ -32,10 +32,9 @@ async def update_admin(client, message):
                     InlineKeyboardButton(
                         "Channel", url=f"https://t.me/riobotsupport"
                     )
-
             ]
         )
-   )
+   ],
 
 
 @Client.on_message(command("pause") & other_filters)
