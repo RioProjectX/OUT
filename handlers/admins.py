@@ -22,7 +22,7 @@ async def update_admin(client, message):
     for u in new_ads:
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
-    await message.reply_text("✅ Bot ***berhasil dimuat ulang !***\n✅ ***Daftar admin*** telah ***diperbarui !***")
+    await message.reply_text("✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui**")
 
 
 @Client.on_message(command("pause") & other_filters)
