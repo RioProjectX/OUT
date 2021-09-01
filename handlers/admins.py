@@ -32,9 +32,9 @@ async def update_admin(client, message):
                     InlineKeyboardButton(
                         "Project By", url=f"https://t.me/riio00"
                   )
-            ]
-        )
-   ]
+            ],
+        ]
+   )
 
 
 @Client.on_message(command("pause") & other_filters)
