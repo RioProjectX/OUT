@@ -1,4 +1,4 @@
-impoart traceback
+import traceback
 import asyncio
 from asyncio import QueueEmpty
 from config import que
