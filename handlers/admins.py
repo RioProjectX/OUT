@@ -34,7 +34,7 @@ async def update_admin(client, message):
                   )
             ]
         )
-   ],
+   ]
 
 
 @Client.on_message(command("pause") & other_filters)
