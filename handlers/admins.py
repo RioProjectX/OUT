@@ -27,10 +27,10 @@ async def update_admin(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "Group", url=f"https://t.me/riio00"
+                        "Group", url=f"https://t.me/siiniaja"
                     ),
                     InlineKeyboardButton(
-                        "Project By", url=f"https://t.me/riobotsupport"
+                        "Project By", url=f"https://t.me/riio00"
                   )
             ]
         )
