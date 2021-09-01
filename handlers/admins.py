@@ -23,7 +23,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text("✅ Bot **berhasil dimuat ulang !**\n✅ **Daftar admin** telah **diperbarui !**"
-      reply_markup=InlineKeyboardMarkup(
+      keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
