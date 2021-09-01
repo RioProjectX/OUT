@@ -1,4 +1,4 @@
-import traceback
+impoart traceback
 import asyncio
 from asyncio import QueueEmpty
 from config import que
@@ -23,18 +23,6 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text("✅ Bot **berhasil dimuat ulang !**\n✅ **Daftar admin** telah **diperbarui !**")
-       reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Group", url=f"https://t.me/siiniaja"
-                    ),
-                    InlineKeyboardButton(
-                        "Project By", url=f"https://t.me/riio00"
-                  )
-            ],
-        ]
-   )
 
 
 @Client.on_message(command("pause") & other_filters)
