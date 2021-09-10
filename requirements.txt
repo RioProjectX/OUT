@@ -10,9 +10,12 @@ aiofiles
 asyncio
 youtube_search
 search_engine_parser
-ffmpeg
-Pillow
+ffmpeg-python
+pillow
 future
 psutil
 wget
-tswift
+motor
+dnspython
+bs4
+pyaml
