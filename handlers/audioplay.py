@@ -12,12 +12,13 @@ from callsmusic import callsmusic, queues
 import converter
 from downloaders import youtube
 
-from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
+from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, GROUP_SUPPORT, OWNER_NAME
 from helpers.filters import command, other_filters
 from helpers.decorators import errors
 from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
 
 @Client.on_message(command("stream") & other_filters)
 @errors
@@ -31,11 +32,16 @@ async def stream(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Group",
-                        url=f"https://t.me/siiniaja"),
+                        text="💡 Group",
+                        url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton(
-                        text="Channel​",
+                        text="🕊️ Channel​",
                         url=f"https://t.me/riobotsupport")
+                 ],
+                 [
+                    InlineKeyboardButton(
+                        text="👩‍💻 Created By​",
+                        url=f"https://t.me/riio00")
                 ]
             ]
         )
@@ -61,17 +67,20 @@ async def stream(_, message: Message):
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
+        costumer = message.from_user.mention
+        flname = file_name
         await message.reply_photo(
-        photo=f"{QUE_IMG}",
+        photo=f"{AUD_IMG}",
         reply_markup=keyboard,
-        caption=f"💡  lagu anda ditambahkan ke **antrian!**\n\n🎧 Atas permintaan {costumer}")
+        caption=f"💡  lagu anda ditambahkan ke **antrian!**\n\n🏷 Nama : {flname} \n🎧 Atas permintaan {costumer}")
         return await lel.delete()
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         costumer = message.from_user.mention
+        flname = file_name
         await message.reply_photo(
         photo=f"{AUD_IMG}",
         reply_markup=keyboard,
-        caption=f"🎧 **sedang memutar** sebuah lagu\n\n🎧 Atas permintaan {costumer}!"
+        caption=f"💡 **sedang memutar**\n\n🏷 Nama : {flname} \n🎧 Atas permintaan {costumer}!"
         )
         return await lel.delete()
