@@ -1,6 +1,3 @@
-# Copyright (C) 2021 By KennedyProject
-
-
 import asyncio
 
 from pyrogram import Client, filters
