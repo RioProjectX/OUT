@@ -1,5 +1,3 @@
-# Module by https://github.com/tofikdn
-# Copyright (C) 2021 TdMusic
 # Ported by @RioProjectX for Rio-Music
 
 import requests
