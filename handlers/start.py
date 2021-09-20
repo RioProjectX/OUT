@@ -54,13 +54,13 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
                         "➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "🛠 Repo", url="http://github.com/RioProjectX/Rio-Music"
+                         "🛠 Repo", url="http://github.com/RioProjectX/Rio-Musik"
                     ),
                     InlineKeyboardButton(
                         "🐥 Pemilik Bot", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/siiniaja"
+                        "👥 Official Group", url=f"https://t.me/riogroupsupport"
                     ),
                     InlineKeyboardButton(
                         "📣 Official Channel", url=f"https://t.me/riobotsupport")
@@ -104,7 +104,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="❔ HOW TO USE ME ❔", url="https://t.me/siiniaja"
+                        text="❔ Cara Menggunakan Saya ❔", url="https://t.me/riogroupsupport"
                     )
                 ]
             ]
@@ -157,7 +157,7 @@ async def help_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "GROUP", url=f"https://t.me/siiniaja"
+                        "GROUP", url=f"https://t.me/riogroupsupport"
                     ),
                     InlineKeyboardButton(
                         "CHANNEL", url=f"https://t.me/riobotsupport"
@@ -177,7 +177,7 @@ async def help_(client: Client, message: Message):
 @authorized_users_only
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("Check Ping...")
+    m_reply = await message.reply_text("_Mengecek Ping_...")
     delta_ping = time() - start
     await m_reply.edit_text(
         "**Ping Pong!!**\n"
