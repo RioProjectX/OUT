@@ -32,12 +32,12 @@
         "BG_IMAGE": {
             "description": "fill with your link costum background image",
             "required": false,
-            "value": "https://telegra.ph/file/18d25616d9883400af112.png"
+            "value": "poto untuk backgroup music"
         },
         "THUMB_IMG": {
             "description": "fill with costum thumbnail image it's different with bg_image",
             "required": false,
-            "value": "https://telegra.ph/file/bec3b0efa1b3967164eaa.jpg"
+            "value": "poto buat pencarian lagu"
         },
         "OWNER_NAME": {
             "description": "fill with your username without @",
@@ -74,7 +74,7 @@
         "GROUP_SUPPORT": {
             "description": "isi dengan username grup kamu, jika tidak punya skip saja",
             "required": false,
-            "value": "siiniaja"
+            "value": "riogroupsupport"
         }
     },
     "buildpacks": [
